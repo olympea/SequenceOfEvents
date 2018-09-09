@@ -1,16 +1,16 @@
 //
-//  ViewController.swift
+//  BaseViewController.swift
 //  SequenceOfEvents
 //
-//  Created by Olga on 9/6/18.
+//  Created by Olga on 9/9/18.
 //  Copyright © 2018 Olha Tretiak. All rights reserved.
 //
 
 import UIKit
 
-class BlueViewController: UIViewController {
-    let name = "Blue"
-    var cycleText = ""
+class BaseViewController: UIViewController {
+
+    @IBOutlet weak var resultTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,22 +34,16 @@ class BlueViewController: UIViewController {
         super.viewDidDisappear(animated)
         addToLog(#function)
     }
-
-    func addToLog(_ functionName:String?){
-        guard let functionName = functionName else {
-            return
-        }
-        cycleText.append("\(name): \(functionName)\n")
-    }
- 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ToOrangeSegue" {
-            let orangeViewController = segue.destination as! OrangeViewController
-            let existingText = orangeViewController.fullLogs
-            orangeViewController.fullLogs = "\(existingText) \n\(cycleText)"
-            cycleText = ""
-        }
+    
+    func name() -> String {
+        return ""
     }
     
-}
+    func addToLog(_ functionName:String){
+        LogInfo.text += ("\(name()): \(functionName)\n")
+        if self is OrangeViewController,resultTextView.text != nil {
+            resultTextView.text =  LogInfo.text
+        }
+     }
 
+}

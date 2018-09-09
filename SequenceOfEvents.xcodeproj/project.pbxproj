@@ -14,6 +14,8 @@
 		7705060121408327000C1EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770505FF21408327000C1EA9 /* LaunchScreen.storyboard */; };
 		77050609214083A9000C1EA9 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77050608214083A9000C1EA9 /* OrangeViewController.swift */; };
 		7705060B214083B8000C1EA9 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705060A214083B8000C1EA9 /* GreenViewController.swift */; };
+		771C708E21457ABA00D14DD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C708D21457ABA00D14DD9 /* BaseViewController.swift */; };
+		771C7090214583D800D14DD9 /* LogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C708F214583D800D14DD9 /* LogInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7705060221408327000C1EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77050608214083A9000C1EA9 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 		7705060A214083B8000C1EA9 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		771C708D21457ABA00D14DD9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		771C708F214583D800D14DD9 /* LogInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +63,25 @@
 			isa = PBXGroup;
 			children = (
 				770505F621408323000C1EA9 /* AppDelegate.swift */,
-				770505F821408323000C1EA9 /* BlueViewController.swift */,
-				77050608214083A9000C1EA9 /* OrangeViewController.swift */,
-				7705060A214083B8000C1EA9 /* GreenViewController.swift */,
+				771C7091214584CE00D14DD9 /* ViewControllers */,
+				771C708F214583D800D14DD9 /* LogInfo.swift */,
 				770505FA21408323000C1EA9 /* Main.storyboard */,
 				770505FD21408327000C1EA9 /* Assets.xcassets */,
 				770505FF21408327000C1EA9 /* LaunchScreen.storyboard */,
 				7705060221408327000C1EA9 /* Info.plist */,
 			);
 			path = SequenceOfEvents;
+			sourceTree = "<group>";
+		};
+		771C7091214584CE00D14DD9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				771C708D21457ABA00D14DD9 /* BaseViewController.swift */,
+				770505F821408323000C1EA9 /* BlueViewController.swift */,
+				77050608214083A9000C1EA9 /* OrangeViewController.swift */,
+				7705060A214083B8000C1EA9 /* GreenViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771C7090214583D800D14DD9 /* LogInfo.swift in Sources */,
+				771C708E21457ABA00D14DD9 /* BaseViewController.swift in Sources */,
 				7705060B214083B8000C1EA9 /* GreenViewController.swift in Sources */,
 				770505F921408323000C1EA9 /* BlueViewController.swift in Sources */,
 				77050609214083A9000C1EA9 /* OrangeViewController.swift in Sources */,
@@ -289,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 259UM7W8CT;
+				DEVELOPMENT_TEAM = U3E77K55JS;
 				INFOPLIST_FILE = SequenceOfEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 259UM7W8CT;
+				DEVELOPMENT_TEAM = U3E77K55JS;
 				INFOPLIST_FILE = SequenceOfEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

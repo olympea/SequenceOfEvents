@@ -19,10 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-J6-fmn">
-                                <rect key="frame" x="67.5" y="575" width="240" height="72"/>
+                                <rect key="frame" x="95" y="575" width="185" height="72"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Hnq-Yu-3RE"/>
                                     <constraint firstAttribute="height" constant="72" id="hSY-da-xIZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -53,19 +52,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="vgU-jW-JGP">
-                                <rect key="frame" x="20" y="74" width="335" height="491"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUt-Zw-1gX">
-                                <rect key="frame" x="67.5" y="575" width="240" height="72"/>
+                                <rect key="frame" x="103" y="575" width="170" height="72"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="BCV-yA-c8o"/>
-                                    <constraint firstAttribute="width" constant="240" id="bDH-2a-vnT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="To Green Screen"/>
@@ -73,21 +64,27 @@
                                     <segue destination="pzZ-U3-zza" kind="show" identifier="ToGreenSegue" id="bU2-o9-4WU"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="deD-ox-Q2q">
+                                <rect key="frame" x="16" y="80" width="343" height="479"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vgU-jW-JGP" firstAttribute="top" secondItem="hdJ-s3-6qu" secondAttribute="top" constant="10" id="Aby-4i-tjb"/>
-                            <constraint firstItem="hdJ-s3-6qu" firstAttribute="trailing" secondItem="vgU-jW-JGP" secondAttribute="trailing" constant="20" id="B04-Kk-ld4"/>
-                            <constraint firstItem="JUt-Zw-1gX" firstAttribute="centerX" secondItem="hdJ-s3-6qu" secondAttribute="centerX" id="J0x-h8-qtC"/>
-                            <constraint firstItem="JUt-Zw-1gX" firstAttribute="top" secondItem="vgU-jW-JGP" secondAttribute="bottom" constant="10" id="LbN-9a-ubF"/>
+                            <constraint firstItem="deD-ox-Q2q" firstAttribute="top" secondItem="hdJ-s3-6qu" secondAttribute="top" constant="16" id="8bp-0s-qze"/>
+                            <constraint firstItem="deD-ox-Q2q" firstAttribute="leading" secondItem="hdJ-s3-6qu" secondAttribute="leading" constant="16" id="8dG-sv-bR4"/>
                             <constraint firstItem="hdJ-s3-6qu" firstAttribute="bottom" secondItem="JUt-Zw-1gX" secondAttribute="bottom" constant="20" id="dw3-Pz-c2x"/>
-                            <constraint firstItem="vgU-jW-JGP" firstAttribute="leading" secondItem="hdJ-s3-6qu" secondAttribute="leading" constant="20" id="tkZ-J6-E6v"/>
+                            <constraint firstItem="hdJ-s3-6qu" firstAttribute="trailing" secondItem="deD-ox-Q2q" secondAttribute="trailing" constant="16" id="eEV-Gl-c13"/>
+                            <constraint firstItem="JUt-Zw-1gX" firstAttribute="centerX" secondItem="deD-ox-Q2q" secondAttribute="centerX" id="lQ1-bM-HEh"/>
+                            <constraint firstItem="JUt-Zw-1gX" firstAttribute="top" secondItem="deD-ox-Q2q" secondAttribute="bottom" constant="16" id="pfY-Wu-DiL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hdJ-s3-6qu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Orange Screen" id="NV6-7d-4fT"/>
                     <connections>
-                        <outlet property="resultLabel" destination="vgU-jW-JGP" id="X2E-MH-zZ8"/>
+                        <outlet property="resultTextView" destination="deD-ox-Q2q" id="XF9-Qw-0I4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWR-Py-GYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
